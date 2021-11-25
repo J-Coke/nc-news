@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getArticles } from "../utils/api";
 import { Link } from "react-router-dom";
+import Votes from "./Votes";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
@@ -41,7 +42,7 @@ const Articles = () => {
               </Link>
               {/* <ExpandableBody article={article.title} /> */}
               <p>Topic: {article.topic}</p>
-              <p>Votes: {article.votes}</p>
+              <Votes article_id={article.article_id} votes={article.votes} />
               <p>Author: {article.author}</p>
             </li>
           );

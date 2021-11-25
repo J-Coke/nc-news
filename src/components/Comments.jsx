@@ -23,7 +23,7 @@ const Comments = () => {
             <p className="commentDetails">
               {" "}
               <span> Created at: {comment.created_at}</span>
-              <span>Votes: {comment.votes}</span>
+              {/* <span>Votes: {comment.votes}</span> */}
               <span>Author: {comment.author}</span>
             </p>
           </li>

@@ -63,3 +63,11 @@ li {
 h4 {
   font-style: italic;
 }
+#usernameTop {
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+.updown {
+  font-size: 1.5rem;
+}
