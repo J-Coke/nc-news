@@ -13,13 +13,10 @@ const Comments = ({ months }) => {
   const { article_id } = useParams();
 
   useEffect(() => {
-    console.log(commentDel, "effect");
     getComments(article_id).then((comments) => {
-      console.log("here");
       setComments(comments);
     });
   }, [article_id, newComment, commentDel]);
-  console.log(commentDel, "if and");
   return (
     <div>
       <CommentAdder

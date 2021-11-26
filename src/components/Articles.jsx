@@ -3,19 +3,22 @@ import { useEffect, useState } from "react";
 import { getArticles } from "../utils/api";
 import { Link } from "react-router-dom";
 import Votes from "./Votes";
+import SortForm from "./SortForm";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
+  const [sort, setSort] = useState({ sortBy: "", orderBy: "" });
   const { topic } = useParams();
-
+  console.log(useParams());
   useEffect(() => {
-    getArticles(topic).then((articles) => {
+    getArticles(topic, sort).then((articles) => {
       setArticles(articles);
     });
   }, [topic]);
 
   return (
     <main className="articles">
+      <SortForm setSort={setSort} />
       <ul>
         {articles.map((article) => {
           return (
