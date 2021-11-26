@@ -7,18 +7,19 @@ import SortForm from "./SortForm";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
-  const [sort, setSort] = useState({ sortBy: "", orderBy: "" });
+  const [sort, setSort] = useState("");
+  const [order, setOrder] = useState("");
   const { topic } = useParams();
-  console.log(sort);
+  console.log(sort, order);
   useEffect(() => {
-    getArticles(topic).then((articles) => {
+    getArticles(topic, sort, order).then((articles) => {
       setArticles(articles);
     });
-  }, [topic, sort]);
+  }, [topic, sort, order]);
 
   return (
     <main className="articles">
-      <SortForm setSort={setSort} />
+      <SortForm setSort={setSort} setOrder={setOrder} />
       <ul>
         {articles.map((article) => {
           return (
@@ -34,6 +35,7 @@ const Articles = () => {
                 author={article.author}
               />
               <p>Author: {article.author}</p>
+              <p>Comments: {article.comment_count}</p>
             </li>
           );
         })}

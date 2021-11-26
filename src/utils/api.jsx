@@ -10,13 +10,26 @@ export const getTopics = () => {
   });
 };
 
-export const getArticles = (topic, sort) => {
+export const getArticles = (topic, sort, order) => {
   let path = "/articles";
   if (topic) {
     path += `?topic=${topic}`;
+    if (sort) {
+      path += `&sort_by=${sort}`;
+      if (order) {
+        path += `&order=${order}`;
+      }
+    }
+  } else {
+    console.log(sort, order);
+    if (sort) {
+      path += `?sort_by=${sort}`;
+      if (order) {
+        path += `&order=${order}`;
+      }
+    }
   }
-  //   console.log(sort.sortBy);
-  //   if ()
+  console.log(path);
   return newsApi.get(path).then((res) => {
     return res.data.articles;
   });

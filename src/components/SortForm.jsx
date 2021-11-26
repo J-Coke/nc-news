@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const SortForm = ({ setSort }) => {
+const SortForm = ({ setSort, setOrder }) => {
   //   const sortOptions = ["author", "title", "created", "votes", "comment_count"];
   //   const sortObj = {"author":{}, title, "created", "votes", "comment_count"}
 
@@ -12,14 +12,7 @@ const SortForm = ({ setSort }) => {
           name="sortBy"
           id="sortBy"
           onChange={(e) => {
-            setSort((prevState) => {
-              let newState = Object.assign(
-                prevState,
-                (prevState.sortBy = e.target.value)
-              );
-              console.log(newState);
-              return newState;
-            });
+            setSort(e.target.value);
           }}
         >
           <option value="">Please select option</option>
@@ -27,20 +20,13 @@ const SortForm = ({ setSort }) => {
           <option value="title">Title</option>
           <option value="created_at">Publication Date</option>
           <option value="votes">Votes</option>
-          <option value="comments">Comments</option>
+          <option value="comment_count">Comments</option>
         </select>
         <select
           name="orderBy"
           id="orderBy"
           onChange={(e) => {
-            setSort((prevState) => {
-              let newState = Object.assign(
-                prevState,
-                (prevState.orderBy = e.target.value)
-              );
-              console.log(newState);
-              return newState;
-            });
+            setOrder(e.target.value);
           }}
         >
           <option value="">Please select option</option>
