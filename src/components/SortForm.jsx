@@ -1,11 +1,9 @@
 import { useState } from "react";
 
-const SortForm = () => {
+const SortForm = ({ setSort }) => {
   //   const sortOptions = ["author", "title", "created", "votes", "comment_count"];
   //   const sortObj = {"author":{}, title, "created", "votes", "comment_count"}
 
-  const [sort, setSort] = useState({ sortBy: "", orderBy: "" });
-  console.log(sort);
   return (
     <form>
       <fieldset>

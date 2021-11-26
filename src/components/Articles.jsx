@@ -9,12 +9,12 @@ const Articles = () => {
   const [articles, setArticles] = useState([]);
   const [sort, setSort] = useState({ sortBy: "", orderBy: "" });
   const { topic } = useParams();
-  console.log(useParams());
+  console.log(sort);
   useEffect(() => {
-    getArticles(topic, sort).then((articles) => {
+    getArticles(topic).then((articles) => {
       setArticles(articles);
     });
-  }, [topic]);
+  }, [topic, sort]);
 
   return (
     <main className="articles">
