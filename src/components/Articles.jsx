@@ -14,23 +14,6 @@ const Articles = () => {
     });
   }, [topic]);
 
-  //   const ExpandableBody = (article) => {
-  //     const [isMore, setIsMore] = useState(false);
-  //     const toggleIsMore = () => {
-  //       setIsMore((prevIsMore) => !prevIsMore);
-  //     };
-  //     return (
-  //       <div className="expBody">
-  //         {isMore && article.votes}
-  //         {/* {!isMore && article.body.slice(0, 20)} */}
-  //         <span onClick={toggleIsMore}>
-  //           {isMore && "...less"}
-  //           {!isMore && "...more"}
-  //         </span>
-  //       </div>
-  //     );
-  //   };
-
   return (
     <main className="articles">
       <ul>
@@ -42,7 +25,11 @@ const Articles = () => {
               </Link>
               {/* <ExpandableBody article={article.title} /> */}
               <p>Topic: {article.topic}</p>
-              <Votes article_id={article.article_id} votes={article.votes} />
+              <Votes
+                article_id={article.article_id}
+                votes={article.votes}
+                author={article.author}
+              />
               <p>Author: {article.author}</p>
             </li>
           );

@@ -4,23 +4,27 @@ import { UserContext } from "../contexts/UserContext";
 
 const Login = () => {
   const [users, setUsers] = useState([]);
+  const [userToLogin, setUserToLogin] = useState("");
   const { currentUser, setCurrentUser } = useContext(UserContext);
   useEffect(() => {
     getUsers().then((users) => {
       setUsers(users);
     });
   }, [currentUser]);
-
+  const handleSubmit = (e) => {
+    setCurrentUser(userToLogin);
+  };
   return (
-    <form>
+    <form id="users">
       <label>
-        Please select your username here:{" "}
         <select
-          id="users"
+          placeholder="jhbj"
+          form="users"
           onChange={(e) => {
-            setCurrentUser({ username: e.target.value });
+            setUserToLogin({ username: e.target.value });
           }}
         >
+          <option></option>
           {users.map((user) => {
             return (
               <option value={user.username} key={user.username}>
@@ -29,6 +33,9 @@ const Login = () => {
             );
           })}
         </select>
+        <button type="button" onClick={handleSubmit}>
+          Login
+        </button>
       </label>
     </form>
   );

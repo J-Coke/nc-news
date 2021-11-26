@@ -5,17 +5,14 @@ import Nav from "./components/Nav";
 import Articles from "./components/Articles";
 import Article from "./components/Article";
 import { Routes, Route } from "react-router-dom";
-import { UserContext } from "./contexts/UserContext";
-import { useState } from "react";
+import { UserProvider } from "./contexts/UserContext";
 
 function App() {
-  const [currentUser, setCurrentUser] = useState({ username: "" });
-  const isLoggedIn = !!currentUser.username;
   return (
-    <UserContext.Provider value={{ isLoggedIn, currentUser, setCurrentUser }}>
+    <UserProvider>
       <div className="App">
         <Header />
-        <UserSelector isLoggedIn={isLoggedIn} />
+        <UserSelector />
         <Nav />
         <Routes>
           <Route path="/" element={<Articles />} />
@@ -25,7 +22,7 @@ function App() {
           <Route path="/articles/:article_id/comments" element={<Article />} />
         </Routes>
       </div>
-    </UserContext.Provider>
+    </UserProvider>
   );
 }
 

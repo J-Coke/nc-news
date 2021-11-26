@@ -70,4 +70,11 @@ h4 {
 }
 .updown {
   font-size: 1.5rem;
+  cursor: pointer;
+}
+.updown:hover {
+  text-shadow: -0.25px -0.25px 0 black, 0.25px 0.25px black;
+}
+#users {
+  font-size: 1.5rem;
 }

@@ -35,9 +35,25 @@ export const getUsers = () => {
   });
 };
 export const patchVotes = (article_id, inc_votes) => {
-  console.log(article_id, inc_votes, "api");
+  console.log(article_id, { inc_votes }, "api");
   return newsApi.patch(`articles/${article_id}`, { inc_votes }).then((res) => {
     console.log(res);
     return res.data.article.votes;
+  });
+};
+export const postComment = (article_id, author, body) => {
+  console.log(article_id, { author, body }, "api");
+  return newsApi
+    .post(`articles/${article_id}/comments`, { author, body })
+    .then((res) => {
+      console.log(res);
+      return res.data.comment;
+    });
+};
+export const deleteComment = ({ comment_id }) => {
+  console.log(comment_id, "api");
+  return newsApi.delete(`comments/${comment_id}/`).then((res) => {
+    console.log(res);
+    return res.data;
   });
 };
