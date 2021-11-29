@@ -13,7 +13,9 @@ const SortForm = ({ setSort, setOrder }) => {
             setSort(e.target.value);
           }}
         >
-          <option value="">Please select option</option>
+          <option value="" disabled>
+            Please select option
+          </option>
           <option value="author">Author</option>
           <option value="title">Title</option>
           <option value="created_at">Publication Date</option>
@@ -27,7 +29,9 @@ const SortForm = ({ setSort, setOrder }) => {
             setOrder(e.target.value);
           }}
         >
-          <option value="">Please select option</option>
+          <option value="" disabled>
+            Please select option
+          </option>
           <option value="ASC">Ascending</option>
           <option value="DESC">Descending</option>
         </select>

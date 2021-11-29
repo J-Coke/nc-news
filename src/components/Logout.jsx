@@ -1,11 +1,9 @@
 import { UserContext } from "../contexts/UserContext";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 
 const Logout = () => {
   const { currentUser, setCurrentUser } = useContext(UserContext);
-  useEffect(() => {
-    setCurrentUser(currentUser);
-  }, [currentUser, setCurrentUser]);
+
   return (
     <div>
       You are currently logged in as

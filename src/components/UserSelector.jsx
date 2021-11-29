@@ -5,7 +5,6 @@ import Logout from "./Logout";
 
 const UserSelector = () => {
   const { currentUser, isLoggedIn } = useContext(UserContext);
-  useEffect(() => {}, [currentUser]);
   return isLoggedIn ? <Logout /> : <Login />;
 };
 export default UserSelector;

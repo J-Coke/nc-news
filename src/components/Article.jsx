@@ -12,7 +12,7 @@ const Article = ({ months }) => {
     getArticle(article_id).then((article) => {
       setArticle(article);
     });
-  }, [article]);
+  }, [article_id]);
   console.log(article, "article");
 
   return (
