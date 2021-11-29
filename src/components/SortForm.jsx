@@ -18,7 +18,7 @@ const SortForm = ({ setSort, setOrder }) => {
           <option value="title">Title</option>
           <option value="created_at">Publication Date</option>
           <option value="votes">Votes</option>
-          {/* <option value="comment_count">Comments</option> */}
+          <option value="comment_count">Comments</option>
         </select>
         <select
           name="orderBy"
