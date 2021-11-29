@@ -31,6 +31,7 @@ export const getArticles = (topic, sort, order) => {
   }
   console.log(path);
   return newsApi.get(path).then((res) => {
+    console.log(res.data);
     return res.data.articles;
   });
 };

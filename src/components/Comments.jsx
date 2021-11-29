@@ -42,7 +42,9 @@ const Comments = ({ months }) => {
                   {" on "}
                   {comment.created_at.substring(8, 10)}
                   {"th "}
-                  {months[parseInt(comment.created_at.substring(5, 7))]}{" "}
+                  {
+                    months[parseInt(comment.created_at.substring(5, 7)) - 1]
+                  }{" "}
                   {comment.created_at.substring(0, 4)}
                 </time>
                 <CommentDeleter

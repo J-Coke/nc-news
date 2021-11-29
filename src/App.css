@@ -45,6 +45,10 @@ h2 {
   font-family: "Playfair Display", serif;
   text-transform: uppercase;
 }
+ul {
+  list-style-type: none;
+  text-decoration: none;
+}
 li {
   border: 1px solid;
   margin-bottom: 0.5rem;
@@ -64,8 +68,8 @@ h4 {
   font-style: italic;
 }
 #usernameTop {
-  font-weight: 500;
-  font-size: 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
   font-style: italic;
 }
 .updown {

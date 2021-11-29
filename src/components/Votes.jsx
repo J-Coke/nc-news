@@ -9,8 +9,8 @@ const Votes = ({ votes, article_id, author }) => {
     if (currentUser.username === author) {
       return (
         <div>
-          Votes: {votes + voteModifier} Sorry, you can't vote on your own
-          articles!
+          Votes: {votes + voteModifier} {" - "} Sorry, you cannot vote on your
+          own articles!
         </div>
       );
     } else {
