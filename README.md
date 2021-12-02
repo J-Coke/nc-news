@@ -11,7 +11,7 @@ The aim of this project was to produce a news application that where a user coul
   - vote and comment on articles 
   - delete their own comments.
 
-The application utilises my backend api project which is hosted here: https://jc-news-app.herokuapp.com/api and for which the code can be found here: https://github.com/J-Coke/Back-End-Project
+The application utilises my backend api project, the endpoints for which can be found here: https://jc-news-app.herokuapp.com/api and for which the code can be found here: https://github.com/J-Coke/Back-End-Project
 
 ## Setup
 
