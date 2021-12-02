@@ -1,14 +1,17 @@
-# NC News Front End Project
+# NC News - Front End Project
 
-## Link ot hosted version
+## Link to hosted version
 
 This project is hosted at https://jc-news.netlify.app
 
 ## Summary
 
-The aim of this project was to produce a news application that where a user could filter articles by category and sort them according to a variety of attributes. Once logged in the user would then be able to vote and comment on articles as well as delete any of their own comments.
+The aim of this project was to produce a news application that where a user could: 
+  - filter and sort articles 
+  - vote and comment on articles 
+  - delete their own comments.
 
-Thie application utilises my backend api building project which is hosted here: https://jc-news-app.herokuapp.com/api and for which the bode can be found here: https://github.com/J-Coke/Back-End-Project
+The application utilises my backend api project which is hosted here: https://jc-news-app.herokuapp.com/api and for which the code can be found here: https://github.com/J-Coke/Back-End-Project
 
 ## Setup
 
